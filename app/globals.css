@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.transition {
+  @apply transition-all duration-500 ease-in-out
+}
+
+.text_color {
+  @apply text-black dark:text-neutral-200
+}
+
+/*
+Estilos de formularios
+*/
+
+.form_label {
+  @apply text-sm font-bold w-full
+}
+
+.form_input {
+  @apply w-full pl-2 h-10 rounded shadow-xl dark:bg-neutral-600 invalid:border-2 invalid:border-red-400 text_color
+}
+
+.form_container {
+  @apply dark:bg-none items-center gap-3 text_color w-full
+}
+
+
+.form_background {
+  @apply dark:bg-neutral-800 bg-neutral-300
+}
+
+
+/*
+Card UI.UX
+*/
+
+.card {
+  @apply bg-white/70 dark:bg-neutral-800 rounded-xl text_color p-5 w-full transition flex flex-col;
+}
+
+.card--between {
+  @apply justify-between;
+}
+
+/*
+Estilos de tablas 
+*/
+
+table {
+  @apply w-full table-auto rounded-md
+}
+
+/*Estilo de THEAD*/
+thead {
+  @apply text-lg font-extrabold bg-neutral-300 dark:bg-neutral-700 text_color
+}
+
+thead tr {
+  @apply uppercase text-xs font-light h-7
+}
+
+thead tr th {
+  @apply text-center
+}
+
+/*Estilo de TBODY*/
+tbody {
+  @apply bg-neutral-200 text-center dark:bg-neutral-800 dark:opacity-85 dark:text-neutral-300 text-sm
+}
+
+tbody tr {
+  @apply border-b border-neutral-400 last:border-b-0
+}
+
+tbody tr td {
+  @apply text-center
+}
+
+tbody tr td div {
+  @apply flex h-6 text-black
+}
+
+tbody tr:hover {
+  @apply bg-neutral-100 dark:bg-neutral-700 overflow-y-scroll;
+}
+
+/*ESPECIALES*/
+.hiddenCol {
+  @apply hidden lg:table-cell sm:table-cell
+}
+
+.deletedCol {
+  @apply bg-red-200
+}
+
+/**
+TABLE MAIN STYLES
+*/
+
+.header-main {
+  @apply w-full items-center flex justify-center gap-2 mb-3 scale-90
+}
+
+.table-main {
+  @apply w-full shadow-lg rounded-lg h-[calc(100vh-80px)] overflow-y-scroll
+}
+
+/**
+UI/UX
+*/
+.create_button {
+  @apply bg-green-500 hover:bg-green-600 cursor-pointer
+}
+
+.delete_button {
+  @apply bg-red-500 hover:bg-red-600 cursor-pointer
+}
